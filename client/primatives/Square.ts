@@ -5,11 +5,16 @@
 export class Square {
     x: number;
     y: number;
-    height: number;
+    isWalkable: boolean = true;
 
-    constructor(x: number, y: number, height: number) {
+    constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
-        this.height = height;
+
+        var whit = Math.random();
+        if(whit>0.9){
+            console.log(whit);
+            this.isWalkable = false;
+        }
     }
 }
