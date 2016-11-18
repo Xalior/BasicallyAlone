@@ -29,7 +29,7 @@ export class Rock extends Square  {
         };
 
         var baseMesh = BABYLON.MeshBuilder.CreateBox('rock', options, scene);
-        var parts = parseInt((Math.random()*5))+1;
+        var parts = (Math.random()*5)+1;
         var meshes = [];
         for(var i=0;i<parts;i++){
             var partMesh = baseMesh.clone("rock_"+i);
