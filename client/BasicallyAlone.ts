@@ -9,14 +9,14 @@ export class BasicallyAlone {
     world: World;
 
     createScene() {
-
-
-
         // create a basic BJS Scene object
         var scene = new BABYLON.Scene(this.engine);
+        var stage = new BABYLON.Scene(this.engine);
 
         // create a FreeCamera, and set its position to (x, y, z)
         this.camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(6, 12, -3), scene);
+        //Adding an Arc Rotate Camera
+//        this.camera = new BABYLON.ArcRotateCamera("Camera", -0.5, 2.2, 100, BABYLON.Vector3.Zero(), scene);
 
         // target the camera to scene origin
         this.camera.setTarget(BABYLON.Vector3.Zero());
@@ -32,30 +32,17 @@ export class BasicallyAlone {
                 var thisSquare = this.world.grid[x][y];
                 var tile = BABYLON.Mesh.CreateGround('ground1', 1, 1, 1, scene);
                 tile.position.x = x-(this.world.width/2);
-                tile.position.y = -0.1;
+                tile.position.y = -0.00001;
                 tile.position.z = y-(this.world.length/2);
                 // quick hack for plotting...
-                thisSquare.createModel(scene);
-                if(thisSquare.mesh) {
-                    thisSquare.mesh.position.x = x - (this.world.width / 2);
-                    thisSquare.mesh.position.y = 0.5;
-                    thisSquare.mesh.position.z = y - (this.world.length / 2);
-                }
+                thisSquare.createModel(scene, this.world);
+                // if(thisSquare.mesh) {
+                //     thisSquare.mesh.position.x = x - (this.world.width / 2);
+                //     thisSquare.mesh.position.y = 0.5;
+                //     thisSquare.mesh.position.z = y - (this.world.length / 2);
+                // }
             }
         }
-
-        function importedMeshes(mesh) {
-            mesh.position = new BABYLON.Vector3(0, 1, 0); // for
-
-//            mesh.scaling = new BABYLON.Vector3(5, 5, 5); // example
-            console.log(mesh);
-        }
-
-        BABYLON.SceneLoader.ImportMesh("Suzanne", "/models/", "monkey.babylon", scene,
-            function (newMeshes, particleSystems, skeletons) {
-                importedMeshes(newMeshes[0]);
-            }
-        );
 
         // return the created scene
         return scene;
@@ -67,8 +54,10 @@ export class BasicallyAlone {
 
 
         this.world = new World('dev1');
+        this.world.engine = this.engine;
         // call the createScene function
         this.scene = this.createScene();
+
 
         // run the render loop
         this.engine.runRenderLoop(() => {

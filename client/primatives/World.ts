@@ -7,7 +7,7 @@ import { Square } from './Square';
 import { Rock } from './Rock';
 
 export class World {
-
+    engine: BABYLON.Engine;
     width: number;  // X
     length: number; // Y
     

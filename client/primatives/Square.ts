@@ -2,9 +2,12 @@
  * Created by darran on 17/11/2016.
  */
 
+var myMesh: BABYLON.Mesh;
+
 // A "Square" is the most basic space on the board - it's Walkable, or it's not... Super it to do more...
 export class Square {
-    mesh: BABYLON.Mesh;
+    private parentMesh: BABYLON.AbstractMesh;
+    mesh: BABYLON.AbstractMesh;
     x: number;
     y: number;
     isWalkable: boolean = true;
@@ -14,7 +17,18 @@ export class Square {
         this.y = y;
     }
 
-    createModel(scene) {
+    importMesh(mesh) {
+        this.mesh = mesh;
+    }
+
+
+    createModel(scene, world) {
+        console.log('create');
+        myMesh = new BABYLON.Mesh('', scene);
+        // but don't render that badboy...
+        scene.meshes.pop();
+
+        this.mesh = new BABYLON.Mesh('', scene);
         return null;
     }
 }
