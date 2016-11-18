@@ -1,0 +1,52 @@
+Exporter version: 5.1.0, Blender version: 2.78 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  false
+		flat shading entire scene:  false
+		texture Method:  LEGACY
+		texture directory:  /Volumes/janet.xalior.com/u/GIT/BasicallyAlone/public/models/
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	processing begun of mesh:  Stone_01
+		processing begun of Standard material:  StonesMat_01
+			Diffuse texture found "Diffuse"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+			Specular texture found "Diffuse"
+				Image texture found, type:  specularTexture, mapped using: "UVMap"
+			Bump texture found "Normal"
+				Image texture found, type:  bumpTexture, mapped using: "UVMap"
+		num positions      :  279
+		num normals        :  279
+		num uvs            :  558
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  870
+	processing begun of mesh:  Stone_02
+		registered as also a user of material:  StonesMat_01
+		num positions      :  326
+		num normals        :  326
+		num uvs            :  652
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  954
+	processing begun of mesh:  Stone_03
+		registered as also a user of material:  StonesMat_01
+		num positions      :  269
+		num normals        :  269
+		num uvs            :  538
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  774
+	processing begun of mesh:  Stone_04
+		registered as also a user of material:  StonesMat_01
+		num positions      :  265
+		num normals        :  265
+		num uvs            :  530
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  912
+	processing begun of light (HEMI):  Hemi
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.6665 secs

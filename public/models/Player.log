@@ -1,0 +1,81 @@
+Exporter version: 5.1.0, Blender version: 2.78 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  false
+		flat shading entire scene:  false
+		texture Method:  LEGACY
+		texture directory:  /Volumes/janet.xalior.com/u/GIT/BasicallyAlone/public/models/
+	Python World class constructor completed
+	processing begun of skeleton:  Armature, id:  0
+		processing begun of bone:  pelvis, index:  0
+		processing begun of bone:  thigh.L, index:  1
+		processing begun of bone:  shin.L, index:  2
+		processing begun of bone:  foot.L, index:  3
+		processing begun of bone:  toe.L, index:  4
+		processing begun of bone:  heel.L, index:  5
+		processing begun of bone:  thigh.R, index:  6
+		processing begun of bone:  shin.R, index:  7
+		processing begun of bone:  foot.R, index:  8
+		processing begun of bone:  toe.R, index:  9
+		processing begun of bone:  heel.R, index:  10
+		processing begun of bone:  stomach, index:  11
+		processing begun of bone:  chest, index:  12
+		processing begun of bone:  upper_arm.L, index:  13
+		processing begun of bone:  forearm.L, index:  14
+		processing begun of bone:  hand.L, index:  15
+		processing begun of bone:  index.L.001, index:  16
+		processing begun of bone:  index.L.002, index:  17
+		processing begun of bone:  index.L.003, index:  18
+		processing begun of bone:  middle.L.001, index:  19
+		processing begun of bone:  middle.L.002, index:  20
+		processing begun of bone:  middle.L.003, index:  21
+		processing begun of bone:  ring.L.001, index:  22
+		processing begun of bone:  ring.L.002, index:  23
+		processing begun of bone:  ring.L.003, index:  24
+		processing begun of bone:  pinky.L.001, index:  25
+		processing begun of bone:  pinky.L.002, index:  26
+		processing begun of bone:  pinky.L.003, index:  27
+		processing begun of bone:  thumb.L.001, index:  28
+		processing begun of bone:  thumb.L.002, index:  29
+		processing begun of bone:  thumb.L.003, index:  30
+		processing begun of bone:  upper_arm.R, index:  31
+		processing begun of bone:  forearm.R, index:  32
+		processing begun of bone:  hand.R, index:  33
+		processing begun of bone:  index.R.001, index:  34
+		processing begun of bone:  index.R.002, index:  35
+		processing begun of bone:  index.R.003, index:  36
+		processing begun of bone:  middle.R.001, index:  37
+		processing begun of bone:  middle.R.002, index:  38
+		processing begun of bone:  middle.R.003, index:  39
+		processing begun of bone:  ring.R.001, index:  40
+		processing begun of bone:  ring.R.002, index:  41
+		processing begun of bone:  ring.R.003, index:  42
+		processing begun of bone:  pinky.R.001, index:  43
+		processing begun of bone:  pinky.R.002, index:  44
+		processing begun of bone:  pinky.R.003, index:  45
+		processing begun of bone:  thumb.R.001, index:  46
+		processing begun of bone:  thumb.R.002, index:  47
+		processing begun of bone:  thumb.R.003, index:  48
+		processing begun of bone:  neck, index:  49
+		processing begun of bone:  head, index:  50
+	processing begun of mesh:  Human
+		WARNING: No materials have been assigned: 
+		num positions      :  2028
+		num normals        :  2028
+		num uvs            :  4056
+		num uvs2           :  0
+		num colors         :  8112
+		num indices        :  6564
+		Skeleton stats:  
+			Total Influencers:  4380
+			Avg # of influencers per vertex:  2.1598
+			Highest # of influencers observed:  7, num vertices with this:  4
+			exported as 7 influencers
+			num skeletonWeights and skeletonIndices:  16224
+	processing begun of camera (FreeCamera):  Camera
+	processing begun of light (POINT):  Lamp.001
+	processing begun of light (POINT):  Lamp
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.8095 secs

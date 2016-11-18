@@ -1,5 +1,7 @@
 import { World } from './primatives/World';
 
+import { Player } from './Player';
+
 export class BasicallyAlone {
     canvas: HTMLCanvasElement;
     engine: BABYLON.Engine;
@@ -7,6 +9,8 @@ export class BasicallyAlone {
     camera: BABYLON.FreeCamera;
 
     world: World;
+
+    player: Player;
 
     createScene() {
         // create a basic BJS Scene object
@@ -34,13 +38,8 @@ export class BasicallyAlone {
                 tile.position.x = x-(this.world.width/2);
                 tile.position.y = -0.00001;
                 tile.position.z = y-(this.world.length/2);
-                // quick hack for plotting...
                 thisSquare.createModel(scene, this.world);
-                // if(thisSquare.mesh) {
-                //     thisSquare.mesh.position.x = x - (this.world.width / 2);
-                //     thisSquare.mesh.position.y = 0.5;
-                //     thisSquare.mesh.position.z = y - (this.world.length / 2);
-                // }
+
             }
         }
 
@@ -52,12 +51,13 @@ export class BasicallyAlone {
         this.canvas = <HTMLCanvasElement>document.getElementById('renderCanvas');
         this.engine = new BABYLON.Engine(this.canvas, true);
 
-
         this.world = new World('dev1');
         this.world.engine = this.engine;
         // call the createScene function
         this.scene = this.createScene();
 
+        this.player = new Player(20,20);
+        this.player.createModel(this.scene, this.world);
 
         // run the render loop
         this.engine.runRenderLoop(() => {

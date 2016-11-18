@@ -23,7 +23,6 @@ export class Square {
 
 
     createModel(scene, world) {
-        console.log('create');
         myMesh = new BABYLON.Mesh('', scene);
         // but don't render that badboy...
         scene.meshes.pop();

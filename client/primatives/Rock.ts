@@ -14,8 +14,7 @@ export class Rock extends Square  {
     }
 
     createModel(scene, world) {
-        var stoneStr = "Stone_0" + Math.floor((Math.random()*4) +1).toString();
-        console.log(stoneStr);
+        var stoneStr = "Stone_0" + Math.floor((Math.random()*4) +1).toString()
         return BABYLON.SceneLoader.ImportMesh(stoneStr, "/models/", "Stones.babylon", scene,
             (newMeshes, particleSystems, skeletons) => {
                 // but don't render that badboy...
