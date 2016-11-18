@@ -45,16 +45,17 @@ export class BasicallyAlone {
         }
 
         function importedMeshes(mesh) {
+            mesh.position = new BABYLON.Vector3(0, 1, 0); // for
 
-            mesh.position = new BABYLON.Vector3(0, 0, 0); // for
-
-            mesh.scaling = new BABYLON.Vector3(.025, .025, .025); // example
+//            mesh.scaling = new BABYLON.Vector3(5, 5, 5); // example
             console.log(mesh);
         }
 
-        BABYLON.SceneLoader.ImportMesh("Suzanne", "/models/", "monkey.babylon", scene, function (newMeshes) {
-            importedMeshes(newMeshes[0]);
-        });
+        BABYLON.SceneLoader.ImportMesh("Suzanne", "/models/", "monkey.babylon", scene,
+            function (newMeshes, particleSystems, skeletons) {
+                importedMeshes(newMeshes[0]);
+            }
+        );
 
         // return the created scene
         return scene;
